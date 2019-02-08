@@ -94,7 +94,7 @@ func tlsDialWithDialer(dialer *net.Dialer, network, addr string, config *tls.Con
 	return &tlsClientCon{conn, rawConn}, nil
 }
 
-// this exists to silent an error message in go vet
+// copyTLSConfig exists to silent an error message in go vet
 func copyTLSConfig(cfg *tls.Config) *tls.Config {
 	return &tls.Config{
 		Certificates:             cfg.Certificates,

@@ -115,7 +115,7 @@ func (p *JSONProgress) String() string {
 	return pbBox + numbersBox + timeLeftBox
 }
 
-// shim for testing
+// now; shim for testing
 func (p *JSONProgress) now() time.Time {
 	if p.nowFunc == nil {
 		p.nowFunc = func() time.Time {
@@ -125,7 +125,7 @@ func (p *JSONProgress) now() time.Time {
 	return p.nowFunc()
 }
 
-// shim for testing
+// width; shim for testing
 func (p *JSONProgress) width() int {
 	if p.winSize != 0 {
 		return p.winSize

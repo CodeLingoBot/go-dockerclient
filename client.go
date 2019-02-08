@@ -508,7 +508,7 @@ type streamOptions struct {
 	context           context.Context
 }
 
-// if error in context, return that instead of generic http error
+// chooseError; if error in context, return that instead of generic http error
 func chooseError(ctx context.Context, err error) error {
 	select {
 	case <-ctx.Done():

@@ -939,7 +939,7 @@ func TestCreateContainerDuplicateName(t *testing.T) {
 	}
 }
 
-// Workaround for 17.09 bug returning 400 instead of 409.
+// TestCreateContainerDuplicateNameWorkaroundDocker17_09 checks a case when for 17.09 bug returning 400 instead of 409.
 // See https://github.com/moby/moby/issues/35021
 func TestCreateContainerDuplicateNameWorkaroundDocker17_09(t *testing.T) {
 	t.Parallel()
